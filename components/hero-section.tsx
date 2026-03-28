@@ -4,7 +4,18 @@ import { Star, MapPin, Clock, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
+const WHATSAPP_PHONE = "5551234567"
+
 export function HeroSection() {
+  const handleWhatsAppCall = () => {
+    window.open(`https://wa.me/${WHATSAPP_PHONE}`, "_blank")
+  }
+
+  const handleWhatsAppMessage = () => {
+    const message = "Hola, me gustaría agendar una cita para servicio automotriz."
+    window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`, "_blank")
+  }
+
   return (
     <section className="relative min-h-screen flex flex-col">
       {/* Background Image */}
@@ -41,7 +52,7 @@ export function HeroSection() {
             Contacto
           </a>
         </nav>
-        <Button size="sm" className="hidden md:flex">
+        <Button size="sm" className="hidden md:flex" onClick={handleWhatsAppMessage}>
           Agendar Cita
         </Button>
       </header>
@@ -71,7 +82,7 @@ export function HeroSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mb-12">
-          <Button size="lg" className="px-8">
+          <Button size="lg" className="px-8" onClick={handleWhatsAppCall}>
             <Phone className="h-4 w-4 mr-2" />
             Llamar Ahora
           </Button>
