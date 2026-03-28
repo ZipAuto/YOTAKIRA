@@ -3,8 +3,8 @@ self.__BUILD_MANIFEST = {
     "afterFiles": [],
     "beforeFiles": [
       {
-        "source": "/nombre-del-repositorio//_next/:path+",
-        "destination": "/nombre-del-repositorio/_next/:path+"
+        "source": "/YOTAKIRA//_next/:path+",
+        "destination": "/YOTAKIRA/_next/:path+"
       }
     ],
     "fallback": []
